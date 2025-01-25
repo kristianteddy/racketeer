@@ -13,7 +13,6 @@ export default function RacketFiltersComponent({allBrands}: { allBrands: string[
     const [sortBy, setSortBy] = useState(searchParams.get("sortBy") || "");
     const [query, setQuery] = useState(searchParams.get("sortBy") || "");
 
-    // Update state if search params change
     useEffect(() => {
         setSelectedBrand(searchParams.get("brand") || "");
         setSortBy(searchParams.get("sortBy") || "");
@@ -24,7 +23,6 @@ export default function RacketFiltersComponent({allBrands}: { allBrands: string[
         const updatedParams = new URLSearchParams(searchParams.toString());
         updatedParams.set(param, value);
 
-        // Update the URL with the new search parameters
         router.push(`/rackets?${updatedParams.toString()}`);
     };
 
