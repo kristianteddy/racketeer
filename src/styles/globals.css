@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-700;
+
+}
+
+option {
+    font-family: "Inter", "Inter Fallback", sans-serif;
+}
